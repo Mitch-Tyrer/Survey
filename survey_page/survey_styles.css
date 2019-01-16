@@ -1,0 +1,5 @@
+input[type=submit].btn-block {
+    width: auto;
+    margin-top: 16px;
+    float: right;
+}
