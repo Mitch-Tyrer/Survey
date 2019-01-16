@@ -1,65 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="survey_styles.css">
 
     <title>Survey Form</title>
 </head>
+
 <body>
-    <h1 id="title">Movie Survey</h1>
-    <p id="description">
-        A quick survey from your hosts here at The Majestic in order to increase your viewing pleasure.
-    </p>
-    <form id="survey-form">
-        <label for="full-name" id="name-label">Full Name:</label>
-        <input type="text" name="name" id="name" placeholder="full name">
-        <label for="email" id="email-label">Your Email Address:</label>
-        <input type="email" name="email" id="email" placeholder="email">
-        <!-- need to have a validation error for incorrect format-->
-        <label for="movies-a-month" id="number-label">How many movies, on average, do you watch a month?</label>
-        <input type="text" name="movies-a-month" id="number">
-        <!-- need to have validation to make sure numbers are the only input
-             need to have a min and max attribute for validation-->
-        <select name="viewing-exp" id="dropdown">
-            <option value="home">At Home</option>
-            <option value="cinema">At The Cinema</option>
-        </select>
-        <input type="radio" name="genre" id="genre-radio" value="action">
-        <input type="radio" name="genre" id="genre-radio" value="adventure">
-        <input type="radio" name="genre" id="genre-radio" value="comedy">
-        <input type="radio" name="genre" id="genre-radio" value="crime">
-        <input type="radio" name="genre" id="genre-radio" value="drama">
-        <input type="radio" name="genre" id="genre-radio" value="epics">
-        <input type="radio" name="genre" id="genre-radio" value="horror">
-        <input type="radio" name="genre" id="genre-radio" value="musicals">
-        <input type="radio" name="genre" id="genre-radio" value="scifi">
-        <input type="radio" name="genre" id="genre-radio" value="war">
-        <input type="radio" name="genre" id="genre-radio" value="westerns">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4" id="title">Movie Survey</h1>
+            <p class="lead" id="description">
+                A quick survey from your hosts here at The Majestic in order to increase your viewing pleasure.
+            </p>
+        </div>
+    </div>
 
-        <input type="checkbox" name="treats" id="treat-box" value="popcorn">
-        <input type="checkbox" name="treats" id="treat-box" value="candy">
-        <input type="checkbox" name="treats" id="treat-box" value="beer">
-        <input type="checkbox" name="treats" id="treat-box" value="meal">
-        <input type="checkbox" name="treats" id="treat-box" value="none">
+    <div class="container">
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="full-name" id="name-label">Full Name:</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="full name">
+                <label for="email" id="email-label">Your Email Address:</label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="email">
+                <!-- need to have a validation error for incorrect format-->
+                <label for="movies-a-month" id="number-label">How many movies, on average, do you watch a month?</label>
+                <input class="form-control" type="text" name="movies-a-month" id="number">
+                <!-- need to have validation to make sure numbers are the only input
+                     need to have a min and max attribute for validation-->
 
-        <label for="comments">Additional Comments:</label>
-        <textarea name="comments" id="comments" cols="30" rows="10">
+            </div>
+    </div>
+
+
+    <div class="container">
+        <div class="form-group">
+            <label for="viewing-exp">Where do you typically watch movies?</label>
+            <select class="form-control" name="viewing-exp" id="dropdown">
+                <option value="home">At Home</option>
+                <option value="cinema">At The Cinema</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-group row">
+            <legend>What is your favorite genre?</legend>
+            <div class="col"></div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="Action">
+                    <label for="genres" class="form-check-label">Action</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="adventure">
+                    <label for="genres" class="form-check-label">Adventure</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="comedy">
+                    <label for="genres" class="form-check-label">Comedies</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="crime">
+                    <label for="genres" class="form-check-label">Crime/Investigation</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="drama">
+                    <label for="genres" class="form-check-label">Drama</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="epics">
+                    <label for="genres" class="form-check-label">Epics/Historicals</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="horror">
+                    <label for="genres" class="form-check-label">Horror</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="musicals">
+                    <label for="genres" class="form-check-label">Musicals</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="scifi">
+                    <label for="genres" class="form-check-label">Science-Fiction</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="war">
+                    <label for="genres" class="form-check-label">War Films</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-control form-check-input" type="radio" name="genre" id="genre-radio" value="westerns">
+                    <label for="genres" class="form-check-label">Westerns</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="col">
+                <div class="form-group row">
+                    <legend>What do you like to eat/drink during a movie?</legend>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="popcorn">
+                    <label for="treats" class="form-check-label">Popcorn</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="candy">
+                    <label for="treats" class="form-check-label">Candies</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="beer">
+                    <label for="treats" class="form-check-label">WINE AND BEER!</label>
+                </div>
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <label for="treats">What do you like to eat/drink during a movie?</label>
+    Popcorn <br>
+    Candies <br>
+    Beers/Spirits <br>
+    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="meal"> A Royal with Cheese? <br>
+    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="Drink"> Just a tasty beverage?
+    <br>
+    <input class="form-check-input" type="checkbox" name="treats" id="treat-box" value="none"> Nothing! I can't watch
+    and eat. <br>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea name="comments" id="comments" cols="30" rows="10">
             I love The Majestic because...
         </textarea>
-        <input type="submit" id="submit">
+    <input type="submit" id="submit">
     </form>
 
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="survey_app.js"></script>
 </body>
+
 </html>
