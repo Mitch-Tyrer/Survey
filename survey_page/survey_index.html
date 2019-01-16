@@ -26,28 +26,29 @@
         <form id="survey-form">
             <div class="form-group">
                 <label for="full-name" id="name-label">Full Name:</label>
-                <input class="form-control" type="text" name="name" id="name" placeholder="full name">
+                <input class="form-control" type="text" name="name" id="name" placeholder="full name" required>
                 <label for="email" id="email-label">Your Email Address:</label>
-                <input class="form-control" type="email" name="email" id="email" placeholder="email">
+                <input class="form-control" type="email" name="email" id="email" placeholder="email" required>
                 <!-- need to have a validation error for incorrect format-->
                 <label for="movies-a-month" id="number-label">How many movies, on average, do you watch a month?</label>
-                <input class="form-control" type="text" name="movies-a-month" id="number">
+                <input class="form-control" type="number" name="movies-a-month" id="number" min="1" max="3" placeholder="0-100">
                 <!-- need to have validation to make sure numbers are the only input
                      need to have a min and max attribute for validation-->
+                     <div class="container">
+                            <div class="form-group">
+                                <label for="viewing-exp">Where do you typically watch movies?</label>
+                                <select class="form-control" name="viewing-exp" id="dropdown">
+                                    <option value="home">At Home</option>
+                                    <option value="cinema">At The Cinema</option>
+                                </select>
+                            </div>
+                        </div>
 
             </div>
-    </div>
+    
 
 
-    <div class="container">
-        <div class="form-group">
-            <label for="viewing-exp">Where do you typically watch movies?</label>
-            <select class="form-control" name="viewing-exp" id="dropdown">
-                <option value="home">At Home</option>
-                <option value="cinema">At The Cinema</option>
-            </select>
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="form-group row">
@@ -140,7 +141,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
 
     <div class="container">
         <div class="form-group">
@@ -154,7 +155,7 @@
 
 
     </form>
-
+</div>
 
 
 
